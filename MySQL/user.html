@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySQL</title>
+</head>
+<body>
+  <form action="mysql.php" method="POST">
+  <h1>Display Table: </h1>
+    <input type="submit" value="Authors" name="display_authors"><br><br>
+    <input type="submit" value="Titles" name="display_titles"><br><br>
+    
+  <h1>Add a Record: </h1>
+    <label for="author_label">Author: </label>
+    <input type="text" name="author_tb1" id="author_tb">
+    <label for="publisher_label">Publisher: </label>
+    <input type="text" name="publisher_tb" id="publisher_tb"><br><br>
+    <input type="submit" name="add_authors" value="Add to Table Authors"><br><br>
+    <label for="title_label">Title: </label>
+    <input type="text" name="title_tb" id="title_tb">
+    <label for="author_label">Author: </label>
+    <input type="text" name="author_tb2" id="author_tb2">
+    <label for="year_label">Year: </label>
+    <input type="text" name="year_tb" id="year_tb"><br><br>
+    <input type="submit" name="add_titles" value="Add to Table Titles"><br><br>
+
+  <h1>Delete a Record:</h1>
+    <label for="author_label">Delete Author: </label>
+    <input type="text" name="author_delete_tb" id="author_delete_tb"><br><br>
+    <input type="submit" name="delete_author" value="Delete from Table Authors"><br><br>
+    <label for="title_label">Delete Title: </label>
+    <input type="text" name="title_delete_tb" id="title_delete_tb"><br><br>
+    <input type="submit" name="delete_title" value="Delete from Table Titles"><br><br>
+  
+  <h1>Updating year of publication for a given title: </h1>
+    <label for="title_label">Title: </label>
+    <input type="text" name="title_update_tb" id="title_update_tb"><br><br>
+    <label for="year_label">New Year: </label>
+    <input type="text" name="new_year_tb" id="new_year_tb"><br><br>
+    <input type="submit" name="update_title" value="Update Year"><br><br>
+
+  <h1>Given a book find its author and year of publication: </h1>
+    <label for="title_label">Book Title: </label>
+    <input type="text" name="book_tb" id="book_tb"><br><br>
+    <input type="submit" name="display_book" value="Display"><br><br>
+  
+  <h1>Display Book Details of a Publisher: </h1>
+    <label for="publisher_label">Publisher: </label>
+    <input type="text" name="publisher_details_tb" id="publisher_details_tb"><br><br>
+    <input type="submit" name="display_details" value="Display Details"><br><br>
+
+
+  </form>
+</body>
+</html>
+

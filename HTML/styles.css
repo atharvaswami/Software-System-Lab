@@ -1,0 +1,71 @@
+div.a{
+    text-align: center;
+    background-color: burlywood;
+}
+
+div.images img{
+    height: 400px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div .audio {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div .video{
+    width: 40%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div .lists {
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 1.5em;
+    background-image: url('list_bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+div .center{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: white;
+    background-color: blue;
+    font-size: 1.5em;
+    background-image: url('table.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+  }
+
+div .form {
+    text-align: center;
+    background-color: silver;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+

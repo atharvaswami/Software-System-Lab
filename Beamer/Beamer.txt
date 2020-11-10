@@ -1,0 +1,199 @@
+\documentclass{beamer}
+
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\usetheme{Copenhagen}
+\usecolortheme{wolverine}
+
+
+\title{Beamer}
+\author{Atharva Swami \\
+\texttt{190010008@iitdh.ac.in}}
+\subtitle{{\small A \LaTeX\ class for making presentations}}
+\date{\today}
+\institute{CSE, IIT Dharwad}
+
+\begin{document}
+\frame{\titlepage}
+\frame{\tableofcontents}
+
+%Slide 1
+\section{Overlays}
+\begin{frame}
+\frametitle{Overlays}
+\framesubtitle{Itemized and Enumerated list}
+This is a slide with \textbf{\color{blue}{pause}} overlays
+
+\begin{enumerate}
+\pause  \item item1 (enumerate)
+\pause  \item item2 (enumerate)
+  \begin{itemize}
+\pause    \item subitem1 (itemize)
+\pause    \item subitem2 (itemize)
+    \begin{itemize}
+\pause    \item subsubitem1 (itemize)
+\pause    \item subsubitem2 (itemize)
+  \end{itemize}
+  \end{itemize}
+\pause  \item item3 (enumerate)
+\end{enumerate}
+\transboxin
+\end{frame}
+
+%Slide 2
+\begin{frame}[label=PREV]
+\frametitle{Overlays}
+\framesubtitle{Onslide}
+\setbeamercovered{transparent}
+Which computer language do you use most?
+\begin{description}
+\item<2->[Option1] Python
+\item<3->[Option2] Java
+\item<4->[Option3] C++
+\item<5->[Option4] C
+\end{description}
+\onslide<1->{Information about the languages:}\\
+\onslide<2->{Python is used in Web Development}\\
+\onslide<3->{Java is used to develop Android Apps}\\
+\onslide<4->{C++ can be used to develop operating systems, browsers, games}\\
+\onslide<5->{C is a general-purpose programming language}\\
+\transdissolve
+\end{frame}
+
+%Hyperlinks Slide
+\section{Hyperlinks}
+\begin{frame}[label=HYP]
+\frametitle{Hyperlinks}
+To read latest news click:\\
+\\%This slide contains alert command too
+\pause \href{https://timesofindia.indiatimes.com}{\color{red}{\alert<2>{Times Of India}}}\\
+\pause OR\\
+\pause \color{blue}{\url{https://timesofindia.indiatimes.com}}
+\vfill
+\pause \color{violet}{Buttons to navigate through slides}\\
+\hyperlink{TABLE}{\beamergotobutton{Tables}}
+\hyperlink{NEXT}{\beamerskipbutton{Next Slide}}
+\hyperlink{PREV}{\beamerreturnbutton{Previous Slide}}
+\transduration{5}
+% This frame will change in 5 seconds
+\end{frame}
+
+% Structures Slide
+\section{Structures}
+\begin{frame}[label=NEXT]
+\frametitle{Structures}
+\framesubtitle{Blocks}
+\onslide<2->    \begin{block}{Block}
+    This is a normal block.
+    \end{block}
+    \setbeamercolor{block title}{use=structure,fg=white,bg=red!75!black}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=red!20!white}
+\onslide<3->    \begin{block}{Alert Block}
+    This blocks can be used to display warnings!
+    \end{block}
+\transdissolve
+%This slide will slowly dissolve what was shown before
+\end{frame}
+
+% Columns Slide
+\begin{frame}
+\frametitle{Structures}
+\framesubtitle{Columns}
+\begin{columns}
+\column{0.5\textwidth}
+\pause Column 1
+\begin{block}{Normal Block}
+{Lorem ipsum dolor sit amet,consectetuer adipiscing elit.Etiam lobortis facilisis sem.Nullam nec mi et neque pharetrasollicitudin. Praesent imperdietmi nec ante.}
+\end{block}
+\column{0.5\textwidth}
+Column 2
+\pause\begin{exampleblock}{Example Block}
+This block is used to show examples
+\end{exampleblock}
+\setbeamercolor{block title}{use=structure,fg=white,bg=red!75!black}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=red!20!white}
+\pause    \begin{block}{Alert Block}
+    This blocks can be used to display warnings!
+    \end{block}
+\end{columns}
+\transboxin
+%This frame will Move to center from all sides
+\end{frame}
+
+% Figure Slide
+\section{Figures}
+\begin{frame}
+\frametitle{{Figures}}
+\framesubtitle{only command used}
+\begin{center}
+\invisible<2>{\Huge{\color{green}{Cute Puppies}}\\ \tiny{\color{red}\hl{(This will disappear is 2nd slide)}}}\\
+    \only<1->    {\includegraphics[width=3cm, height=3cm]{Dog1.jpg}}
+\only<2->    {\includegraphics[width=3cm, height=3cm]{Dog2.jpg}}
+\only<3>    {\includegraphics[width=3cm, height=3cm]{Dog3.jpg}}
+\end{center}
+\transdissolve
+\end{frame}
+
+% Tables Slides
+% alert command is used here to show the new visible row
+\section{Tables}
+\begin{frame}[label=TABLE]
+\frametitle{Tables}
+\framesubtitle{Appearing Row Wise}
+\setbeamercovered{transparent}
+\begin{center}
+  \begin{tabular}{ l  c  r }
+  \hline
+    \alert<1>       A & \alert<1>B & \alert<1>C \\ \hline
+    \onslide<3-> \alert<3>4 & \alert<3>5 & \alert<3>6 \\ 
+    \onslide<4-> \alert<4>7 & \alert<4>8 & \alert<4>9 \\
+    \onslide<2-> \alert<2>1 & \alert<2>2 & \alert<2>3 \\
+  \end{tabular}
+\end{center}
+\transboxin
+\end{frame}
+
+%Slide Tables
+\begin{frame}
+\frametitle{Tables}
+\framesubtitle{Appearing Column Wise}
+\begin{center}
+    \begin{tabular}{|c|c<{\onslide<2->}c<{\onslide<3->}c<{\onslide<4->}c<{\onslide}}
+    \color<1-4>{blue}{X} & \color<1-2>{cyan}{1} & \color<2-3>{red}{4} & \color<3-4>{violet}{7} & \color<4->{orange}{10} \\ 
+    \color<1-4>{blue}{Y} & \color<1-2>{cyan}{2} & \color<2-3>{red}{5} & \color<3-4>{violet}{8} & \color<4->{orange}{11} \\ 
+    \color<1-4>{blue}{Z} & \color<1-2>{cyan}{3} & \color<2-3>{red}{6} & \color<3-4>{violet}{9} & \color<4->{orange}{12} \\
+  \end{tabular}
+\end{center}
+\transdissolve
+\end{frame}
+
+% Maths Slide
+\section{Maths}
+\begin{frame}{Maths}
+    \begin{theorem}
+Third angle formula for sine $\Rightarrow$ $ sin(3\theta) = 3sin(\theta)$ $-$ $4sin^3(\theta) $
+\end{theorem}
+\begin{proof}
+$
+\begin{aligned}
+LHS &=\sin3\theta \\
+\uncover<2->{&=\sin(2\theta+\theta)} \\ \uncover<3->{&=\sin(2\theta)\cos(\theta)+\cos(2\theta)\sin(\theta)} \\
+\uncover<4->{&=2\sin\theta\cos^2\theta+\big(2\cos^2\theta-1\big)\sin\theta}\\ \uncover<5->{&=4\sin\theta\cos^2\theta-\sin\theta} \\
+\uncover<6->{&=4\sin\theta\big(1-\sin^2\theta\big)-\sin\theta}\\ \uncover<7->{&=3\sin\theta-4\sin^3\theta} \\
+\uncover<8->{&=RHS}
+\end{aligned}
+$
+
+\end{proof}
+\transboxin
+\end{frame}
+
+
+\end{document}

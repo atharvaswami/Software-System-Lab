@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--<script>alert("Welcome to The Wizarding World");</script> -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Harry Potter</title>
+  <style>
+    h1 {
+      text-align: center;
+      background-color: blue;
+      color: white;
+      font-style: italic;
+    }
+
+    h2 {
+      text-align: center;
+      color: white;
+      background-color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="background-image: url('background.jpg'); background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+  <!-- Following paragraphs include formating and phrase tags -->
+    <h1>The Wizarding World</h1>
+    <div class="a">
+      <q>Let us step into the night and pursue that flighty temptress, adventure.</q>
+      <p id="intro1">
+        <b>Harry Potter</b> <i>is a series of seven fantasy novels written by</i> <u>British author J. K. Rowling</u>.
+        The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger
+        and Ron Weasley, all of whom are students at <mark>Hogwarts School of Witchcraft and Wizardry</mark>.
+      </p>
+      <p id="intro2">
+        The main story arc concerns Harry's struggle against <abbr title="He who must not be named!">Lord
+          Voldemort</abbr>, a dark wizard who intends to become
+        <big>immortal</big>, overthrow the wizard governing body known as the Ministry of Magic and subjugate all
+        wizards and Muggles <small>(non-magical people)</small>.
+      </p>
+      <hr>
+      <p>
+        <em>Price of Fastest Flying Broomstick:</em> <del>3000$</del> 2000$ <sup>(Christmas Offer)</sup>
+      </p>
+      <a href="https://www.wizardingworld.com/" target="_blank">Click here to know more about the Wizarding World</a>
+      <br>
+      <cite>HTML 5.1 2 <sup>nd</sup> Edition</cite>
+      <br>
+      <div class="code" style="text-align: left;">
+        <pre>
+        <code>
+          #include&lt;stdio.t&gt;
+          int main()
+          {
+            printf("Welcome to Hogwarts");
+            return 0;
+          }
+        </code>
+      </pre>
+      </div>
+
+    </div>
+
+    <h2>Gallery</h2>
+    <p style="text-align: center; color: white; background-color: darkmagenta;">
+      The Castle image is just an ordinary image. <br>
+      Click anywhere on the dragon image to know more about dragons. <br>
+      Click in the center of the fight image to know more about wands. <br>
+    </p>
+    <div class="images">
+      <img src="castle.jpg" alt="Castle">
+      <a href="https://www.wizardingworld.com/features/pottermore-guide-to-dragons" target="_blank"><img
+          src="dragon.jpg" alt="Dragon"></a>
+      <img src="magic.jpg" alt="Magic" usemap="#wand">
+      <map name="wand">
+        <area shape="rect" coords="100,100,300,300" target="_blank"
+          href="https://www.wizardingworld.com/news/discover-your-wand-on-pottermore" alt="wand">
+      </map>
+      <br>
+    </div>
+
+    <h2>Videos</h2>
+    <div class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/n1TqCGEBdLw?start=10" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <h2>Audio</h2>
+    <div class="audio">
+      <a href="https://en.wikipedia.org/wiki/Dreamer_(Martin_Garrix_song)">
+        <audio src="SubwayDreams.mp3" controls></audio>
+      </a>
+    </div>
+<!-- Lists -->
+    <h2>Lists</h2>
+    <div class="lists">
+      <h3>Hogwarts Houses</h3>
+      <ul class="unordered" type="square">
+        <li>Gryffindor</li>
+        <li>Slytherin</li>
+        <li>Ravenclaw </li>
+        <li>Hufflepuff</li>
+      </ul>
+      <h3>Order of Harry Potter Movies to Watch</h3>
+      <ol class="ordered" type="I">
+        <li>Harry Potter and the Philosopher's Stone (2001)</li>
+        <li>Harry Potter and the Chamber of Secrets (2002)</li>
+        <li>Harry Potter and the Prisoner of Azkaban (2004)</li>
+        <li>Harry Potter and the Goblet of Fire (2005)</li>
+        <li>Harry Potter and the Order of the Phoenix (2007)</li>
+        <li>Harry Potter and the Half-Blood Prince (2009)</li>
+        <li>Harry Potter and the Deathly Hallows – Part 1 (2010)</li>
+        <li>Harry Potter and the Deathly Hallows – Part 2 (2011)</li>
+      </ol>
+      <dl>
+        <dt>Fantastic Beasts Movies</dt>
+        <dd>Fantastic Beasts And Where To Find Them</dd>
+        <dd>Fantastic Beasts and Where to Find Them 2</dd>
+      </dl>
+    </div>
+<!-- Tables -->
+    <h2>Table</h2>
+    <div>
+      <table class="center">
+        <thead>
+          <tr>
+            <th colspan="2">Magic Spells</th>
+          </tr>
+          <tr>
+            <th scope="col">Spell Type</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="2">Transfiguration</th>
+            <td>Vera Verto</td>
+          </tr>
+          <tr>
+            <td>Avis</td>
+          </tr>
+          <tr>
+            <th>Charm</th>
+            <td>Expelliarmus</td>
+          </tr>
+          <tr>
+            <th>Jinx</th>
+            <td>Impedimenta</td>
+          </tr>
+          <tr>
+            <th>Hex</th>
+            <td>Anteoculatia</td>
+          </tr>
+          <tr>
+            <th>Curse</th>
+            <td>Aveda Kedavra</td>
+          </tr>
+          <tr>
+            <th>Counter-spell</th>
+            <td>Finite Incantatem</td>
+          </tr>
+          <tr>
+            <th>Healing spell</th>
+            <td>Episkey</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+
+<!-- Form -->
+    <h2>Enroll for Hogwarts School</h2>
+    <form action="">
+      <div class="form">
+        <label for="fname">First Name</label> <br>
+        <input type="text" name="fname" value="Atharva"> <br>
+
+        <label for="lname">Last Name</label> <br>
+        <input type="text" name="lname" value="Swami"> <br>
+
+        <label for="dob">Date of Birth</label> <br>
+        <input type="date" name="dob" id="dob"> <br>
+
+        <label for="house">Choose your House</label> <br>
+        <select name="house" id="house">
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+        </select>
+        <br>
+
+        <label for="phone">Phone Number</label> <br>
+        <input type="number" name="phone" id="phone"> <br>
+
+        <label for="gender">Gender</label> <br>
+        <input type="radio" name="gender" id="gender" value="male"> Male
+        <input type="radio" name="gender" id="gender" value="female"> Female
+        <br>
+
+        <fieldset>
+          <legend>Log-in Details</legend>
+          <label for="email">Email</label> <br>
+          <input type="email" name="email" id="email" value="190010008@iitdh.ac.in"> <br>
+
+          <label for="password">Password</label> <br>
+          <input type="password" name="password" id="password"> <br>
+          <br>
+          <button type="submit" onclick="alert('Check your OWL Mail for your enrollment letter!')">Enroll</button>
+          <br>
+        </fieldset>
+      </div>
+    </form>
+    <br>
+
+  </div>
+</body>
+
+</html>
